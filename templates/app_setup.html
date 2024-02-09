@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+{% block title %}TransX| HARAMBEE COOP{% endblock %}
+  {% block content%}
+  <div class="container mt-5" style="margin: 20px;">
+	<p>Customization set up</p>
+
+<!-- Products SetUp -->
+	<h6 style="font-weight: bold;">Products Set-up</h6> <hr>
+			  <form>
+				<div class="row">
+					<div class="col-25">
+						<label for="productName">Product Name:</label>
+						<input type="text" id="productName" name="productName">
+		
+						<label for="productCategory">Product Category:</label>
+						<input type="text" id="productCategory" name="productCategory">
+					</div>
+		
+					<div class="col-25">
+						<label for="periodMax">Period (max):</label>
+						<input type="text" id="max_period_month" name="max_period_month">
+		
+						<label for="interest_month">Interest (monthly):</label>
+						<input type="text" id="interest_month" name="interest_month">
+					</div>
+		
+					<div class="col-25">
+						<label for="service_fees">Service Fee (monthly):</label>
+						<input type="text" id="service_fees" name="service_fees">
+		
+						<label for="processingFee">Processing Fee:</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+					<div class="col-25">
+						<label for="serviceFeeMonthly">Service Fee (standard):</label>
+						<input type="text" id="serviceFeeMonthly" name="serviceFeeMonthly">
+		
+						<label for="processingFee">Processing Fee(standard):</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+			   </div>
+				<button type="button" class="btn btn-primary" onclick="generateTable()">Generate Table</button>
+		  </form>
+		  <h6 style="font-weight: bold;">Roles</h6> <hr>
+		  <form>
+			<div class="row">
+				<div class="col-25">
+					<label for="productName">Role Name:</label>
+					<select id="roleList" onchange="displaySelectedItem()">
+						<option value="item1">None</option>
+						<option value="item1">Staff Maker</option>
+						<option value="item2">Staff Authoriser</option>
+						<option value="item3">Staff Admin</option>
+						<option value="item1">Member Maker</option>
+						<option value="item2">Member Authoriser</option>
+						<option value="item3">Member Admin</option>
+					</select>
+					<label for="productCategory">Role Description:</label>
+					<input type="text" id="productCategory" name="productCategory">
+				</div>
+				<div class="col-50">
+					<label for="periodMax">selected:</label>
+					<div  class="selected-items" id="roleItemsContainer">
+					</div>	
+				</div>	
+			</div>
+			<button type="button" class="btn btn-primary" onclick="generateTable()">Add</button>
+	  		</form>
+
+			<h6 style="font-weight: bold;">Task</h6> <hr>
+			<form>
+				<div class="row">
+					<div class="col-25">
+						<label for="productName">Task Name:</label>
+						<select id="taskList" onchange="displaySelectedItem()">
+							<option value="item1">None</option>
+							<option value="item1">Credit officer</option>
+							<option value="item2">Treasurer</option>
+							<option value="item3">Credit commitee member</option>
+							<option value="item1">Bank signatory (Finance)</option>
+							<option value="item2">Compliance commitee</option>
+							<option value="item3">Member</option>
+							<option value="item3">Director</option>
+							<option value="item3">Commitee member</option>
+						</select>
+						<label for="productCategory">Role Description:</label>
+						<input type="text" id="productCategory" name="productCategory">
+					</div>
+					<div class="col-50">
+						<label for="periodMax">selected:</label>
+						<div  class="selected-items" id="roleItemsContainer">
+						</div>	
+					</div>	
+				</div>
+				<button type="button" class="btn btn-primary" onclick="generateTable()">Add</button>
+			</form>
+		  <h6 style="font-weight: bold;">Onboarding</h6> <hr>
+		  <form>
+			<div class="row">
+				<div class="col-25">
+					<label for="productName">Product Name:</label>
+					<input type="text" id="productName" name="productName">
+	
+					<label for="productCategory">Product Category:</label>
+					<input type="text" id="productCategory" name="productCategory">
+				</div>
+	
+				<div class="col-25">
+					<label for="periodMax">Period (max):</label>
+					<input type="text" id="max_period_month" name="max_period_month">
+	
+					<label for="interest_month">Interest (monthly):</label>
+					<input type="text" id="interest_month" name="interest_month">
+				</div>
+	
+				<div class="col-25">
+					<label for="service_fees">Service Fee (monthly):</label>
+					<input type="text" id="service_fees" name="service_fees">
+	
+					<label for="processingFee">Processing Fee:</label>
+					<input type="text" id="processingFee" name="processingFee">
+				</div>
+				<div class="col-25">
+					<label for="serviceFeeMonthly">Service Fee (standard):</label>
+					<input type="text" id="serviceFeeMonthly" name="serviceFeeMonthly">
+	
+					<label for="processingFee">Processing Fee(standard):</label>
+					<input type="text" id="processingFee" name="processingFee">
+				</div>
+			</div>
+			<button type="button" class="btn btn-primary" onclick="generateTable()">Generate Table</button>
+	  		</form>
+			<h6 style="font-weight: bold;">Applications</h6> <hr>
+			<form>
+				<div class="row">
+					<div class="col-25">
+						<label for="productName">Product Name:</label>
+						<input type="text" id="productName" name="productName">
+
+						<label for="productCategory">Product Category:</label>
+						<input type="text" id="productCategory" name="productCategory">
+					</div>
+
+					<div class="col-25">
+						<label for="periodMax">Period (max):</label>
+						<input type="text" id="max_period_month" name="max_period_month">
+
+						<label for="interest_month">Interest (monthly):</label>
+						<input type="text" id="interest_month" name="interest_month">
+					</div>
+
+					<div class="col-25">
+						<label for="service_fees">Service Fee (monthly):</label>
+						<input type="text" id="service_fees" name="service_fees">
+
+						<label for="processingFee">Processing Fee:</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+					<div class="col-25">
+						<label for="serviceFeeMonthly">Service Fee (standard):</label>
+						<input type="text" id="serviceFeeMonthly" name="serviceFeeMonthly">
+
+						<label for="processingFee">Processing Fee(standard):</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" onclick="generateTable()">Generate Table</button>
+			</form>
+
+			<h6 style="font-weight: bold;">Transactions</h6> <hr>
+			<form>
+				<div class="row">
+					<div class="col-25">
+						<label for="productName">Product Name:</label>
+						<input type="text" id="productName" name="productName">
+
+						<label for="productCategory">Product Category:</label>
+						<input type="text" id="productCategory" name="productCategory">
+					</div>
+
+					<div class="col-25">
+						<label for="periodMax">Period (max):</label>
+						<input type="text" id="max_period_month" name="max_period_month">
+
+						<label for="interest_month">Interest (monthly):</label>
+						<input type="text" id="interest_month" name="interest_month">
+					</div>
+
+					<div class="col-25">
+						<label for="service_fees">Service Fee (monthly):</label>
+						<input type="text" id="service_fees" name="service_fees">
+
+						<label for="processingFee">Processing Fee:</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+					<div class="col-25">
+						<label for="serviceFeeMonthly">Service Fee (standard):</label>
+						<input type="text" id="serviceFeeMonthly" name="serviceFeeMonthly">
+
+						<label for="processingFee">Processing Fee(standard):</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" onclick="generateTable()">Generate Table</button>
+				</form>
+				<h6 style="font-weight: bold;">Reports</h6> <hr>
+				<form>
+				<div class="row">
+					<div class="col-25">
+						<label for="productName">Product Name:</label>
+						<input type="text" id="productName" name="productName">
+
+						<label for="productCategory">Product Category:</label>
+						<input type="text" id="productCategory" name="productCategory">
+					</div>
+
+					<div class="col-25">
+						<label for="periodMax">Period (max):</label>
+						<input type="text" id="max_period_month" name="max_period_month">
+
+						<label for="interest_month">Interest (monthly):</label>
+						<input type="text" id="interest_month" name="interest_month">
+					</div>
+
+					<div class="col-25">
+						<label for="service_fees">Service Fee (monthly):</label>
+						<input type="text" id="service_fees" name="service_fees">
+
+						<label for="processingFee">Processing Fee:</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+					<div class="col-25">
+						<label for="serviceFeeMonthly">Service Fee (standard):</label>
+						<input type="text" id="serviceFeeMonthly" name="serviceFeeMonthly">
+
+						<label for="processingFee">Processing Fee(standard):</label>
+						<input type="text" id="processingFee" name="processingFee">
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" onclick="generateTable()">Generate Table</button>
+				</form>
+				<h6 style="font-weight: bold;">Statements</h6> <hr>
+				<form>
+				<div class="row">
+					<h6>Choose fields to display</h6>
+					<label for="itemList">Choose an item:</label>
+					<select id="itemList" onchange="displaySelectedItem()">
+						<option value="item1">1 Maker 1 Authoriser</option>
+						<option value="item2">1 Maker 2 Authorisers</option>
+						<option value="item3">1 maker Multiple Authoriser</option>
+						<!-- Add more items as needed -->
+					</select>
+
+					<div style="margin-top: 20px;; border: 1px solid; height: 100px;" class="selected-items" id="selectedItemsContainer">
+						<!-- Selected items will be displayed here -->
+					</div>
+				</div>
+				</form>
+  </div>
+ {% endblock %}
+{%block footer%}
+{% endblock %}
+{% block script %}
+    {{bootstrap.load_js()}}
+    <script src="" async defer></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+	 <style>
+        label {
+            width: 100%; /* Each label and input within a group takes up 100% of the group width */
+            box-sizing: border-box;
+            margin-bottom:0px;
+				height: 20px;
+				font-size: small;
+        } 
+		  select {
+            width: 50%; /* Each label and input within a group takes up 100% of the group width */
+            box-sizing: border-box;
+            margin-bottom: 10px;
+				height: 35px;
+				font-size: smaller;
+				color: blue;
+        }
+		  
+		  input {
+            width: 100%; /* Each label and input within a group takes up 100% of the group width */
+            box-sizing: border-box;
+            margin-bottom: 10px;
+				height: 35px;
+				font-size: small;
+        }
+		  h6 { padding-top: 20px;}
+
+		  .selected-items {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+				height: 110px;
+        }
+
+
+     </style>
+	 
+{% endblock %}

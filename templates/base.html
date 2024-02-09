@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-xxxxx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </head>
+    <body style="font-family: 'Instrument Sans';">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b3ffd7; height: 50px;">
+            <div class="container-fluid">
+              <a class="navbar-brand"><img src="{{ url_for('static', filename='hsacco.png') }}" alt="logo" width="130" height="40" style="padding-right: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{{url_for('logout')}}">logout</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('home')}}">Documentation</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Processing
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{url_for('members')}}">Member Maintenance</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('transactions')}}">Transactions </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{url_for('reports')}}">Reports</a></li>          
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a style="background-color: chartreuse;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Credit Operations
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{url_for('creditops')}}">credit Application</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('creditops_credit_view')}}">credit Status </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{url_for('auth_guarantor')}}"> Guarantor Excecution </a></li>
+                        <li><a class="dropdown-item" href="{{url_for('creditops_credit_auth')}}">credit Appraisal </a></li>
+                      </ul>
+                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('productivity')}}">Productivity</a>
+                    </li>
+
+                  </ul>
+                  <div class="d-flex">
+                    <form class="d-flex">                      
+                            <img src="{{ url_for('static', filename='user.svg') }}" alt="user:" width="30" height="30" class="me-2">
+                        {% if current_user.is_authenticated %}
+                            <p> Hi, {{current_user.firstname }}</p>
+                        {% endif %}
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </nav>
+    
+
+        <div class="d-flex" >
+    <!--sidebar-->
+        <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;">
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center" style="background-color: #b3ffd7;">
+                <li class="border border-light">
+                    <a href="{{url_for('home')}}" class="nav-link  py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                        <img src="{{ url_for('static', filename='return.svg') }}" alt="mdo" width="30" height="30">
+                    </a>
+                </li>
+                <li class="border border-light">
+                    <a href="{{url_for('members')}}" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                        <img src="{{ url_for('static', filename='people.svg') }}" alt="mdo" width="30" height="30">
+                    </a>
+                </li>
+                <li class="border border-light">
+                  <a href="{{url_for('creditops')}}" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                      <img src="{{ url_for('static', filename='credit.svg') }}" alt="mdo" width="30" height="30">
+                  </a>
+                </li>
+                <li class="border border-light">
+                    <a href="{{url_for('transactions')}}" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                        <img src="{{ url_for('static', filename='CM.svg') }}" alt="mdo" width="30" height="30">
+                    </a>
+                </li>
+                <li class="border border-light">
+                    <a href="{{url_for('reports')}}" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+                        <img src="{{ url_for('static', filename='stat_reports.svg') }}" alt="mdo" width="30" height="30">
+                    </a>
+                </li> 
+              </li>
+              <li class="border border-light">
+                  <a href="{{url_for('statements')}}" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+                      <img src="{{ url_for('static', filename='statements.svg') }}" alt="mdo" width="30" height="30">
+                  </a>
+              </li>
+            </ul >
+            <div class="dropdown border-top" style="background-color: #b3ffd7;">
+              <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="{{ url_for('static', filename='settings.svg') }}" alt="mdo" width="30" height="30">
+              </a>
+              <ul class="dropdown-menu text-small shadow">
+                  <li><a class="dropdown-item" href="/admin">Settings</a></li>
+                  <li><a class="dropdown-item" href="{{url_for('setup')}}">Setup</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="{{url_for('logout')}}">Sign out</a></li>
+              </ul>
+              </div>
+        </div>
+<!--information-->
+            {% block content %}{% endblock %}
+        </div>
+
+
+        {% block footer%}
+        <div class="container"> 
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-body-secondary">© 2023 TransX</p>
+          
+              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+          
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="{{url_for('logout')}}" class="nav-link px-2 text-body-secondary">Logout</a></li>
+                <li class="nav-item"><a href="{{url_for('members')}}" class="nav-link px-2 text-body-secondary">Accounts</a></li>
+                <li class="nav-item"><a href="{{url_for('transactions')}}" class="nav-link px-2 text-body-secondary">Transactions</a></li>
+                <li class="nav-item"><a href="{{url_for('reports')}}" class="nav-link px-2 text-body-secondary">Reports</a></li>
+              </ul>
+            </footer>
+        </div>
+        {% endblock %}
+        <script src="" async defer></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        {% block script %}{% endblock %}
+    </body>
+
+
+</html>
