@@ -1,0 +1,437 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url("/static/entire_background3.svg");
+  background-size: cover; 
+}
+
+.navbar{
+  background-color: black;
+}
+
+
+.container-fluid,
+.tab-container {
+  display: flex;
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-fluid-demo,
+.tab-container-demo {
+  display: flex;
+  margin: auto;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+@media (min-width: 1000px) {
+  .container-fluid-demo,
+  .tab-container-demo {
+    max-width: 75%;
+  }
+}
+@media (max-width: 999px) {
+  .container-fluid-demo,
+  .tab-container-demo {
+    max-width: 100%;
+  }
+}
+/* Style tab links */
+.tablink {
+  background-color: rgb(150, 152, 161);
+  color: rgb(33,37,41);
+  font-weight: bold;
+  float: left;
+  border-color:  rgb(170, 170, 170);
+  outline: 1px;
+  cursor: pointer;
+  padding: 5px 5px;
+  font-size: 14px;
+  flex-grow: 1;
+  height: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.tablink.active {
+  background-color: #d8d6e6;
+  border-bottom: none;
+  color: rgb(3, 19, 156);
+
+}
+
+.tablink:hover {
+  background-color: #c5c1e4;
+  border-bottom: none;
+  color: rgb(3, 19, 156);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: rgb(12, 12, 12);
+  display: none;
+  padding: 20px 20px; 
+}
+
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.containerx {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: small;
+}
+input[type=number] {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: small;
+}
+
+input[type=date] {
+  width: 25%;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: small;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+  font-size: small;
+}
+select {
+  height: 30px; 
+  color: rgb(25, 0, 255); 
+  border-radius: 5%;
+  font-size: 12px;
+}
+
+select option {
+  height: 30px; 
+  color: rgb(98, 0, 255); 
+  border-radius: 5%;
+  font-size: 12px;
+}
+
+
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/static/Eurostile.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Industry-Bold';
+    src: url('/app/static/Industry-Bold.ttf') format('truetype');
+      
+}
+
+.eurostile {
+  font-family: 'Eurostile', sans-serif !important;
+}
+
+.toggler {
+  color: rgba(255, 255, 255, 0.55); /* Change to the color you desire */
+  border-color: rgba(255,255,255,.2);
+  background-color: transparent;
+}
+
+.main-content1 {
+  margin-left: 5px !important;
+}
+
+.form-heads{
+  color: rgb(0, 0, 0) ;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form-labels{
+  color: rgb(0, 0, 0) ;
+  font-size: 14px;
+  font-weight: normal;
+}
+.form-inputs{
+  color: rgb(37, 37, 37) ;
+  font-size: 12px;
+  font-weight: normal;
+}
+.headers {
+  color: gold;
+  font-weight: bold;
+  font-family: Eurostile; 
+  font-size: 14px;
+}
+
+.headers-h4 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: Eurostile; 
+  font-size: 14px;
+}
+
+.sub-headers {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 16px;
+}
+@font-face {
+
+	font-family: 'Industry-Black';
+	src: url('/app/static/Industry-Black.ttf') format('truetype');
+ }
+ .inda-bold {
+	font-family: 'Industry-Bold';
+	font-weight:bold;
+	font-style: normal;
+	color: rgb(255, 255, 255);
+  }
+
+ .inda {
+	font-family: 'Industry-Black';
+	font-weight: 300;
+	font-style: normal;
+	color: rgb(255, 255, 255);
+  }
+
+  .euro {
+    font-family: 'Eurostile';
+    font-size: 18px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    }
+
+  .section1{
+    background-color: rgb(20, 0, 29);
+    background-image: url("/static/section1_bgd.jpg");
+    background-size: cover;
+
+  }
+
+  dt{
+    background-color: rgba(255, 227, 168, 0.918);
+    margin-bottom: 3px !important;
+    color: rgb(195, 0, 255);
+    padding: 5px;
+
+  }
+  dd{
+    background-color: rgb(220, 255, 173);
+    margin-bottom: 3px !important;
+    padding: 5px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: Eurostile;
+  }
+
+dl {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of rows */
+    margin: 1px !important;
+}
+.preview{
+  background-color: #0d023d;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  justify-content: center;
+  margin: 0%;
+  white-space: nowrap;
+  border: 1px solid gold;
+  border-radius: 1.5rem;
+
+
+}
+
+.preview-inner{
+  background-color: #d9d3e4;
+  height: 500px;
+  border-bottom-left-radius:1.5rem ;
+  border-bottom-right-radius:1.5rem ;
+}
+.input-demo {
+  height: 100px;
+  width: 140px !important;
+  font-size: 40px !important;
+  font-weight: bold;
+  padding: 0%;
+}
+
+.container-view {
+  max-height: 150px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container-view input {
+  flex: 1; /* Distribute remaining space equally among inputs */
+  margin-right: 10px; /* Add margin between inputs */
+}
+.container-view label {
+  margin: 5px 10px 5px 0;
+  color:rgb(201, 85, 3);
+  font-size: medium;
+}
+
+.text-h5 {
+  color:rgb(249, 106, 3);
+  font-size: larger;
+  
+}
+
+.input-cnt-v {
+  vertical-align: middle;
+  max-width: 150px;
+  height: 50px;
+  color: blue;
+  background-image: url('/static/input1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer; 
+  font-size: 30px !important;
+  font-weight: bold;
+}
+.input-cnt-v2 {
+  vertical-align: middle;
+  max-width: 150px;
+  height: 50px;
+  color: blue;
+  background-image: url('/static/input2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer; 
+  font-size: 30px !important;
+  font-weight: bold;
+}
+.input-cnt-ans {
+  vertical-align: middle;
+  max-width: 150px;
+  height: 50px;
+  color: blue;
+  background-image: url('/static/input_ans.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer; 
+  font-size: 30px !important;
+  font-weight: bold;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+  border: solid #554d67 ; /* Circles are invisible by default */
+}
+.rotated-square {
+  width: 200px;
+  height: 200px;
+  background-image: url('/static/ops_panel.svg');
+  position: relative;
+}
+
+.operators-top,
+.operators-right,
+.operators-left,
+.operators-bottom {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 45%; /* Position relative to the middle of the rotated square */
+  left: 45%; /* Position relative to the middle of the rotated square */
+  transform: translate(-50%, -50%); /* Center the objects */
+}
+
+.operators-top {
+  top: 25%; /* Adjust top position to move closer to the top edge */
+
+}
+
+.operators-right {
+  left: 65%; /* Adjust left position to move closer to the right edge */
+}
+
+.operators-left {
+  left: 25%; /* Adjust left position to move closer to the left edge */
+}
+
+.operators-bottom {
+  top: 65%; /* Adjust top position to move closer to the bottom edge */
+}
+
+.hr-line{
+  color: aqua;
+}
+.tiny-label{
+  display: block;
+  background-color: gold;
+  width: 4rem;
+  height: 0.75rem;
+}
+.tiny-label1{
+  display: block;
+  background-color: rgb(0, 255, 47);
+  width: 4rem;
+  height: 0.75rem;
+}
+.tiny-label2{
+  display: block;
+  background-color: rgb(251, 0, 255);
+  width: 4rem;
+  height: 0.75rem;
+}
+.simulation {
+  
+  padding: 5px; 
+  margin-top: 20px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-stretch: ultra-expanded;
+}

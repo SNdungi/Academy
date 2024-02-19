@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}TransX| HARAMBEE COOP{% endblock %}
+{% block style%}
+   {{bootstrap.load_css()}}
+   .capitalize-input {
+    text-transform: capitalize;
+    }
+{% endblock %}
+{% block content%}
+<div style="width: 100%;">
+  <div class="tab-container">
+    <button class="tablink" onclick="openPage('table_update', this, 'rgb(236, 245, 236)')"id="defaultOpen">Database CSV Updates</button>
+    <button class="tablink" onclick="openPage('credit_update', this, 'rgb(236, 245, 236)')"id="defaultOpen">credit Products Updates</button>
+  </div>
+  
+   <div id="table_update" class="tabcontent">
+    <h1> Database Customer Table Update</h1>
+	 <br>
+	 <form action="{{ url_for('dbupdate') }}" method="POST">
+		<div class="form-group row">
+			 <div class="col-sm-10" style="color: rgb(5, 7, 176);">
+				  <h6> Please input the path to the formatted CSV file with customer BIO data</h6>
+			 </div>
+		</div>
+		<div class="form-group row">
+			 <label for="dbupdate" class="col-form-label">Link: </label>
+			 <div class="col-sm-10">
+				  <input type="text" class="form-control" id="dbupdate" name="link" placeholder="/members/link/file.csv">
+			 </div>
+		</div>
+		<button type="submit" class="btn btn-primary mb-2">Run Update</button>
+	  </form>
+	  {% if success_message %}
+	  <div class="alert alert-success" role="alert">
+			The process was successful!
+	  </div>
+	  {% endif %}
+	</div>
+
+    <div id="credit_update" class="tabcontent">
+        <h1> credit Update Form</h1>
+        {% from 'bootstrap5/form.html' import render_form %}
+        <form method="POST">
+            {{ render_form(credit_products_form) }}
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block script %}
+    {{bootstrap.load_js()}}
+    <script src="" async defer></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

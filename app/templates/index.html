@@ -1,0 +1,117 @@
+{%extends "base.html"%}
+{% block title%} FabriX Collaborative Resourcses {% endblock%}
+
+{% block content%}
+            <div class="container-fluid" id="custom-cards">
+              <section class=" section1">
+              <div class="jumbotron jumbotron-fluid ">
+                <div class="container">
+                  <div class="text-center"> 
+                    <h2 class="display-4 fw-bold headers mt-3">LEARN KNOW CREATE</h2>
+                  </div>
+                  <hr style="margin-bottom: 0%; margin-top: 5px;" class="hr-line">
+                  
+                </div>
+              </div>
+              <div class="row justify-content-center ">
+                <div class="col-md-9" style="height: auto; min-height: 300px; display: flex; flex-direction: column; align-items: baseline">
+                  <div class="h-3 w-16 bg-green-100"></div>
+                  <div style="height: 200px;"></div>
+                  <div class="tiny-label"></div>
+                  <h4 class="display-4 fw-bold headers-h4 mt-4" style="margin-top: auto;">STEM LIFE</h4>
+                  <p class="euro" style="align-self:baseline;" >SCIENCE TECHNOLOGY & MATHS | Learn & Create Solutions to Flourish Life. Concepts and Challenges to encourage curiosity and enrich creativity</p>
+                </div> 
+              
+                <div class="container-fluid" style="margin: 50px; max-width: 75%;font-family: Eurostile; font-size: 14px;">
+
+          
+                    <div style="flex-direction:row; align-items: flex-start; display: flex; flex-wrap: wrap;">
+                      <div style="margin-right: 20px; flex: 1 0 20%;">
+                        <img alt="requirements" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent ;" src="/static/math.svg">
+                        <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class=" sub-headers"> MATH </h4>
+                        <p  class="euro">Math Explained from its simplest form to very Advanced concepts. See how Each idea starts from the basics and branches into elaborate fundamentals of problem solving </p>
+                      </div>
+                      <div style="margin-right: 20px; flex: 1 0 20%;">
+                        <img alt="set up" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/science3.svg">
+                        <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class="sub-headers">SCIENCE</h4>
+                        <p class="euro">Topical explanation of foundational concepts in Physics, Chemistry and Biology</p>
+                      </div>
+                      <div style="margin-right: 20px; flex: 1 0 20%;">
+                        <img alt="run the app" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/comp.svg">
+                        <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class="sub-headers">COMPUTER </h4>
+                        <p class="euro">Learn the World of infomation technoloy and systems that support it. We build intuition behind computing systems and innovation that guidance creativity to flourish life</p>
+                      </div>
+                      <div style="margin-right:20px; flex: 1 0 20%;">
+                        <img alt="share the app" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/analytics.svg">
+                        <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class="sub-headers">STAT&DATA</h4>
+                        <p  class="euro">Revealed understanding into data systems and the undelying statistical principles. Get to simulate data to produce useful infomation and learn concepts of reserch analysis and AI </p>
+                      </div>
+                    </div>
+    
+                </div>
+              </div> 
+            </section>
+            </div>
+
+
+            <div class="container-fluid-demo" >
+                <div class="preview">
+                  <div class="euro simulation"> Simulation</div>
+                  <div class="row">
+                    <div class="container-fluid col-md-12">
+                      <button class="tablink active" onclick="openPage('account', this, 'rgb(236, 245, 236)')"id="defaultOpen">MATH</button>
+                      <button class="tablink" onclick="openPage('accountview', this, 'rgb(236, 245, 236)')"id="defaultOpen">SCIENCE</button>
+                      <button class="tablink" onclick="openPage('accountview', this, 'rgb(236, 245, 236)')"id="defaultOpen">COMPUTER</button>
+                      <button class="tablink" onclick="openPage('accountview', this, 'rgb(236, 245, 236)')"id="defaultOpen">STAT&DATA</button>
+                      </div>
+                  </div>
+                  <div class=" preview-inner">
+                    <div class="p-2 preview-inner">
+                      <div class="row" hidden>
+                        <div class="col-md-6">
+                        <form class="container-view">
+                          <label for="input1">First Number:</label>
+                          <input class="input-cnt-v" type="number" id="circleCount" max="100">  
+                          <label for="input1">Second Number:</label>
+                          <input class="input-cnt-v2" type="number" max="9" id="circleCount1">  
+                        </form>
+
+                        <div class="container-view">
+                          <div class="rotated-square">
+                            <div class=" operators-top">
+                              <img alt="set up" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/divide.svg">
+                            </div>
+                            <div class="operators-right">
+                              <img alt="set up" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/multiply.svg">
+                            </div>
+                            <div class="operators-left">
+                              <img alt="set up" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/add.svg">
+                            </div>
+                            <div class="operators-bottom">
+                              <img alt="set up" loading="lazy" width="70" height="70"  data-nimg="1" class="pb-8" style="color:transparent" src="/static/subtract.svg">
+                            </div>
+                          </div> 
+                        </div>
+                      
+
+                     
+                        <form class="container-view pt-4">
+                          <label for="input1">ANSWER:</label>
+                          <input class="input-cnt-ans" type="number" id="circleCount">   
+                        </form>
+                    
+                    </div>
+
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+    
+              
+
+
+
+
+         
+{% endblock%}

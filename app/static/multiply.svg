@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 256.25 256.25"
+   data-name="Layer 2"
+   id="Layer_2"
+   version="1.1"
+   sodipodi:docname="math signs.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:#67baeb;}.cls-2{fill:#f4c23f;}.cls-3{fill:#46a1f8;}.cls-4{fill:#f4a93f;}.cls-5{fill:#4d4c78;}.cls-6{fill:#83d0fb;}.cls-7{fill:#fad564;}</style>
+  </defs>
+  <title
+     id="title1" />
+  <g
+     id="g34"
+     transform="matrix(0.3137889,0,0,0.3137889,-176.2984,-201.98587)">
+    <rect
+       class="cls-2"
+       height="604.94"
+       rx="91"
+       ry="91"
+       transform="rotate(45)"
+       width="604.90002"
+       x="1129.5125"
+       y="-243.77417"
+       id="rect3" />
+    <path
+       class="cls-4"
+       d="m 1011.9199,1417.4835 -299.09995,-299.1 a 90.9,90.9 0 0 1 0,-128.69997 l 299.09995,-299.1 a 90.2,90.2 0 0 1 11.7,-9.9 91,91 0 0 0 -116.89995,9.9 l -299.1,299.1 a 91.1,91.1 0 0 0 0,128.69997 l 299.1,299.1 a 91,91 0 0 0 116.89995,9.9 90.2,90.2 0 0 1 -11.7,-9.9 z"
+       id="path9" />
+    <path
+       class="cls-4"
+       d="m 838.91995,1199.7835 a 20.1,20.1 0 0 1 -14.1,-34.2 L 1048.1199,942.28353 a 20.011122,20.011122 0 1 1 28.3,28.3 L 853.11995,1193.8835 a 20,20 0 0 1 -14.2,5.9 z"
+       id="path11" />
+    <path
+       class="cls-4"
+       d="m 1062.2199,1199.7835 a 19.9,19.9 0 0 1 -14.1,-5.9 L 824.81995,970.58353 a 20.011122,20.011122 0 1 1 28.3,-28.3 l 223.29995,223.29997 a 20.1,20.1 0 0 1 -14.2,34.2 z"
+       id="path12" />
+    <path
+       class="cls-5"
+       d="m 859.41995,1185.6835 a 19.5,19.5 0 0 1 -14.1,-5.9 19.9,19.9 0 0 1 0,-28.2 L 1068.6199,928.28353 a 19.940411,19.940411 0 1 1 28.2,28.2 L 873.51995,1179.7835 a 19.9,19.9 0 0 1 -14.1,5.9 z"
+       id="path13" />
+    <path
+       class="cls-5"
+       d="m 1082.7199,1185.6835 a 19.5,19.5 0 0 1 -14.1,-5.9 L 845.31995,956.48353 a 19.940411,19.940411 0 1 1 28.2,-28.2 l 223.29995,223.29997 a 19.7,19.7 0 0 1 0,28.2 19.5,19.5 0 0 1 -14.1,5.9 z"
+       id="path14" />
+    <rect
+       class="cls-7"
+       height="187.12"
+       rx="48.400002"
+       ry="48.400002"
+       transform="rotate(45)"
+       width="96.800003"
+       x="1635.2279"
+       y="-131.36647"
+       id="rect28" />
+    <rect
+       class="cls-7"
+       height="142.48"
+       rx="48.400002"
+       ry="48.400002"
+       transform="rotate(-45)"
+       width="96.800003"
+       x="146.04277"
+       y="1431.8545"
+       id="rect32" />
+  </g>
+</svg>
