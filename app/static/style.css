@@ -18,8 +18,6 @@ body, html {
 .tab-container {
   display: flex;
   margin: 0;
-  padding-left: 40px;
-  padding-right: 40px;
   padding-top: 20px;
   align-items: center;
   justify-content: center;
@@ -28,7 +26,6 @@ body, html {
 .container-fluid-demo,
 .tab-container-demo {
   display: flex;
-  margin: auto;
   padding-top: 20px;
   align-items: center;
   justify-content: center;
@@ -81,7 +78,6 @@ body, html {
 .tabcontent {
   color: rgb(12, 12, 12);
   display: none;
-  padding: 20px 20px; 
 }
 
 
@@ -435,3 +431,51 @@ dl {
   font-size: 30px;
   font-stretch: ultra-expanded;
 }
+
+.math-page{
+  margin: auto;
+  display:flex;
+  flex-direction: row;
+  background-color: white;
+  min-height: 500px;
+}
+
+.ruled-book {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.ruled-book td {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  text-align: center;
+  vertical-align: middle;
+  padding: 1px;
+  border: 1px solid gray ;
+}
+.ruled-book input{
+  font-size: 24px;
+  color: blue;
+  width: 100%;
+  height:100%;
+  border:none;
+  text-align: center;
+  vertical-align: middle;
+}
+.ruled-book-ans input{
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  width: 100%;
+  height:100%;
+  border:none;
+  text-align: center;
+  vertical-align: middle;
+}
+.notes-border {
+  border: 5px solid transparent; 
+  padding: 10px;
+  border-image: url('/static/pencil-scribble-texture-3.jpg') 30 repeat;
+  margin: none;
+}
+

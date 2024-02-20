@@ -396,3 +396,10 @@ document.getElementById('circleCount').addEventListener('input', updateCircles);
 
 // Initial update
 updateCircles();
+
+function validateInputs(input) {
+  let value = input.value;
+  let validChars = /[0-9+\-*/]/g; // Regular expression for valid characters
+  let newValue = value.replace(validChars, ''); // Remove any invalid characters
+  input.value = newValue; // Update the input value
+}
