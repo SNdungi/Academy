@@ -1,5 +1,5 @@
 {%extends "base.html"%}
-{% block title%} FabriX Collaborative Resourcses {% endblock%}
+{% block title%} Academy | Fluid Core {% endblock%}
 
 {% block content%}
             <div class="container-fluid" id="custom-cards">
@@ -19,32 +19,77 @@
                   <div style="height: 200px;"></div>
                   <div class="tiny-label"></div>
                   <h4 class="display-4 fw-bold headers-h4 mt-4" style="margin-top: auto;">STEM LIFE</h4>
-                  <p class="euro" style="align-self:baseline;" >SCIENCE TECHNOLOGY & MATHS | Learn & Create Solutions to Flourish Life. Concepts and Challenges to encourage curiosity and enrich creativity</p>
+                  <p class="euro" style="align-self:baseline;" >SCIENCE TECHNOLOGY & MATHS | Concepts. Challenges. Curiosity. Creativity.</p>
                 </div> 
               
                 <div class="container-fluid" style="margin: 50px; max-width: 75%;font-family: Eurostile; font-size: 14px;">
 
           
                     <div style="flex-direction:row; align-items: flex-start; display: flex; flex-wrap: wrap;">
-                      <div style="margin-right: 20px; flex: 1 0 20%;">
+                      <div style="margin-right: 20px; flex: 1 0 20%; margin-top: 10px;">
                         <img alt="requirements" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent ;" src="/static/math.svg">
                         <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class=" sub-headers"> MATH </h4>
                         <p  class="euro">Math Explained from its simplest form to very Advanced concepts. See how Each idea starts from the basics and branches into elaborate fundamentals of problem solving </p>
+                        <div class="dropdown dropend">
+                          <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-bs-toggle="dropdown">
+                            More
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Numbers</a></li>
+                            <li><a class="dropdown-item" href="#">Measurement</a></li>
+                            <li><a class="dropdown-item" href="#">Geometry</a></li>
+                            <li><a class="dropdown-item" href="#">Algebra</a></li>
+                            <li><a class="dropdown-item" href="#">Statistics</a></li>
+                          </ul>
+                        </div>
                       </div>
-                      <div style="margin-right: 20px; flex: 1 0 20%;">
+                      <div style="margin-right: 20px; flex: 1 0 20%; margin-top: 10px;">
                         <img alt="set up" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/science3.svg">
                         <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class="sub-headers">SCIENCE</h4>
                         <p class="euro">Topical explanation of foundational concepts in Physics, Chemistry and Biology</p>
+                        <div class="dropdown dropend">
+                          <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-bs-toggle="dropdown">
+                            More
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Physics</a></li>
+                            <li><a class="dropdown-item" href="#">Chemistry</a></li>
+                            <li><a class="dropdown-item" href="#">Biology</a></li>
+                            <li><a class="dropdown-item" href="#">Applications</a></li>
+                          </ul>
+                        </div>
                       </div>
-                      <div style="margin-right: 20px; flex: 1 0 20%;">
+                      <div style="margin-right: 20px; flex: 1 0 20%; margin-top: 10px;">
                         <img alt="run the app" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/comp.svg">
                         <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class="sub-headers">COMPUTER </h4>
                         <p class="euro">Learn the World of infomation technoloy and systems that support it. We build intuition behind computing systems and innovation that guidance creativity to flourish life</p>
+                        <div class="dropdown dropend">
+                          <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-bs-toggle="dropdown">
+                            More
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Architecture</a></li>
+                            <li><a class="dropdown-item" href="#">Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="#">Hardware</a></li>
+                            <li><a class="dropdown-item" href="#">Software</a></li>
+                          </ul>
+                        </div>
                       </div>
-                      <div style="margin-right:20px; flex: 1 0 20%;">
+                      <div style="margin-right:20px; flex: 1 0 20%; margin-top: 10px;">
                         <img alt="share the app" loading="lazy" width="67" height="67" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/analytics.svg">
                         <h4 style="text-transform: capitalize; font-size: 1.75rem; width: 10rem; padding-top: 10px;" class="sub-headers">STAT&DATA</h4>
                         <p  class="euro">Revealed understanding into data systems and the undelying statistical principles. Get to simulate data to produce useful infomation and learn concepts of reserch analysis and AI </p>
+                        <div class="dropdown dropend">
+                          <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-bs-toggle="dropdown">
+                            More
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Data Concepts</a></li>
+                            <li><a class="dropdown-item" href="#">Collection</a></li>
+                            <li><a class="dropdown-item" href="#">Analysis</a></li>
+                            <li><a class="dropdown-item" href="#">Presentation</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
     
@@ -56,62 +101,71 @@
 
             <div class="container-fluid-demo" >
                 <div class="preview">
-                  <div class="euro simulation"> Simulation</div>
-                  <div class="row">
-                    <div class="container-fluid col-md-12">
-                      <button class="tablink active" onclick="openPage('account', this, 'rgb(236, 245, 236)')"id="defaultOpen">MATH</button>
-                      <button class="tablink" onclick="openPage('accountview', this, 'rgb(236, 245, 236)')"id="defaultOpen">SCIENCE</button>
-                      <button class="tablink" onclick="openPage('accountview', this, 'rgb(236, 245, 236)')"id="defaultOpen">COMPUTER</button>
-                      <button class="tablink" onclick="openPage('accountview', this, 'rgb(236, 245, 236)')"id="defaultOpen">STAT&DATA</button>
+                  <div class="euro simulation"> Simulation
+                    <div class="tiny-label-header speech-bubble">
+                      <div class="tiny-labelx" style="background-color: rgb(0, 255, 47)"><small >A</small></div>
+                      <div class="tiny-labelx" style="background-color: rgb(251, 0, 255);"><small >B</small></div>
+                      <div class="tiny-labelx" style="background-color: gold;"><small >C</small></div>
+                    </div>
+                  </div>
+                  <div class=" preview-inner" id="preview-inner-show">
+                    <div class="p-2 preview-inner">
+                      <div class="display">
+                        <div style="margin-right: 20px; flex: 1 0 40%;">
+                        <h4>Numbers:</h4>
+                        <p style="font-size: 12px;"> 
+                          <em>Whole Numbers</em> are counting positive numbers that start from 0 and go on till infinity. <br>
+                          Other types of numbers are <em>Decimals</em> which contain values between 0 and 1. Decimals are also represented and <em>Fractions</em></p>
+                        
+                        <form method="post" action="{{ url_for('display') }}" onsubmit="scrollToPreviewInner()">
+                            <label for="number">Enter a number less than 1 million (with up to 4 decimal places):</label>
+                            <input style="margin-bottom: 10px;" type="number" step="0.0001" id="number" name="number" required >
+                            <button class="btn btn-outline-warning btn-sm" type="submit">Show Structure</button>
+                        </form>
+                        <p class="display-note"> <span style="font-weight: bold;">Note:</span> <br>
+                          The <em>Place Value </em> is the position of a digit in a number.<br>
+                          The  <em>Total Value </em> is a digit multiplied by the value of its place value.
+                        </p>
+
+
+                       </div>
+
+                        <div style="margin-right: 20px; flex: 1 0 40%;">
+                        {% if place_values %}
+                        <h5 style="margin-bottom: 10px;">Place Value & Total Value for: <span style="color: rgb(255, 166, 0);">{{num}} </span> </h5>
+                        <table class="table table-striped">
+                            <tr>
+                                <th >Digit</th>
+                                <th>Total Value</th>
+                                <th>Place Value Name</th>
+                            </tr>
+                            {% for digit, details in place_values.items() %}
+                            <tr>
+                                <td style="font-weight: bold;">{{ digit[0] }}</td>
+                                <td>{{ details['value'] }}</td>
+                                <td>{{ details['name'] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+              
+                        {% endif %}
+                    
+                        {% if error %}
+                        <p>{{ error }}</p>
+                        {% endif %}
+                        </div>
+
                       </div>
                   </div>
-                  <div class=" preview-inner">
-                    <div class="p-2 preview-inner">
-                      <div class="row" hidden>
-                        <div class="col-md-6">
-                        <form class="container-view">
-                          <label for="input1">First Number:</label>
-                          <input class="input-cnt-v" type="number" id="circleCount" max="100">  
-                          <label for="input1">Second Number:</label>
-                          <input class="input-cnt-v2" type="number" max="9" id="circleCount1">  
-                        </form>
 
-                        <div class="container-view">
-                          <div class="rotated-square">
-                            <div class=" operators-top">
-                              <img alt="set up" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/divide.svg">
-                            </div>
-                            <div class="operators-right">
-                              <img alt="set up" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/multiply.svg">
-                            </div>
-                            <div class="operators-left">
-                              <img alt="set up" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" class="pb-8" style="color:transparent" src="/static/add.svg">
-                            </div>
-                            <div class="operators-bottom">
-                              <img alt="set up" loading="lazy" width="70" height="70"  data-nimg="1" class="pb-8" style="color:transparent" src="/static/subtract.svg">
-                            </div>
-                          </div> 
-                        </div>
-                      
-
-                     
-                        <form class="container-view pt-4">
-                          <label for="input1">ANSWER:</label>
-                          <input class="input-cnt-ans" type="number" id="circleCount">   
-                        </form>
-                    
-                    </div>
-
-                    </div>
                   </div>
-                  </div>
+                  <div>
+                    <form method="post" action="{{ url_for('display_add') }}">
+                      <button class="btn btn-outline-warning btn-sm" type="submit" >Run addition </button>
+                    </form>
+                      <iframe src="/streamlit" width="100%" height="800" style="background-color: aliceblue;"> {{ streamlit_output | safe }} </iframe>
+                    </div>
                 </div>
             </div>
-    
-              
-
-
-
-
-         
+       
 {% endblock%}

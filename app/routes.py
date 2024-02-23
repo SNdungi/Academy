@@ -1,7 +1,7 @@
 from flask import Flask, request,render_template,url_for,redirect,flash,session,g,jsonify,send_from_directory,make_response
 from flask_mail import Mail,Message
 from datetime import datetime
-from app import app,db,models,mail
+from app import app,db,models,mail,content_math
 from sqlalchemy import func,and_,or_
 from app.forms import LoginForm,UserMaintenanceForm,ForgotPassword,PasswordReset
 from flask_admin import Admin
@@ -12,6 +12,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager, login_required,login_user,current_user,logout_user
 import pandas  as pd
 import random
+import subprocess
 
 current_year = datetime.today().year 
 
@@ -259,3 +260,29 @@ def advanced():
 def contact():
     dbsession = get_db_session()
     return render_template('contact.html', current_user=current_user,existing=None)
+
+
+@app.route('/display', methods=['GET', 'POST'])
+def display():
+    place_values = None
+    num=None
+    if request.method == 'POST':
+        number = float(request.form['number'])
+        place_values = content_math.get_place_values(number)
+        num = '{:,.4f}'.format(number)
+
+    return render_template('index.html', place_values=place_values,num=num)
+
+@app.route('/display/addition', methods=['GET', 'POST'])
+def display_add():
+    try:
+        streamlit_output = subprocess.run(['streamlit', 'run', 'animath.py'], capture_output=True)
+        return render_template('index.html', streamlit_output=streamlit_output.stdout.decode('utf-8'))
+    except subprocess.CalledProcessError as e:
+        error_message = f"Error running Streamlit app: {e}"
+        return render_template('index.html', error=error_message)
+    
+@app.route('/streamlit')
+def streamlit():
+    streamlit.set_page_config(page_title="My Streamlit App")
+    streamlit.write("Hello, world!")

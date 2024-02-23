@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}TransX| HARAMBEE COOP{% endblock %}
+{% block title %}Academy | Fluid Core{% endblock %}
 {% block content%}
 <!--infomation-->
     <div class="col-md-9" style="height: auto; min-height: 100px; display: flex; flex-direction: column; align-items: baseline; margin:auto ;">
@@ -11,17 +11,17 @@
     </div>
 
 <!--Tabs-->
-    <div class="container">
-      <div class="container-fluid col-md-11">
-        <button class="tablink" onclick="openPage('math', this, 'rgb(236, 245, 236)')"id="defaultOpen">MATH</button>
-        <button class="tablink" onclick="openPage('science', this, 'rgb(236, 245, 236)')"id="defaultOpen">SCIENCE</button>
-        <button class="tablink" onclick="openPage('computer', this, 'rgb(236, 245, 236)')"id="defaultOpen">COMPUTER</button>
-        <button class="tablink" onclick="openPage('statsData', this, 'rgb(236, 245, 236)')"id="defaultOpen">STAT&DATA</button>
-      </div>
+
+    <div class="container-fluid col-md-9 m-md-auto">
+      <button class="tablink" onclick="openPage('math', this, 'rgb(236, 245, 236)')"id="defaultOpen">MATH</button>
+      <button class="tablink" onclick="openPage('science', this, 'rgb(236, 245, 236)')"id="defaultOpen">SCIENCE</button>
+      <button class="tablink" onclick="openPage('computer', this, 'rgb(236, 245, 236)')"id="defaultOpen">COMPUTER</button>
+      <button class="tablink" onclick="openPage('statsData', this, 'rgb(236, 245, 236)')"id="defaultOpen">STAT&DATA</button>
     </div>
+
 <!--Tabcontent-->
     <div id="math" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
         <h5 class="text-h5">MATH : </h5>
         <dl class="row">
@@ -55,7 +55,7 @@
     </div>
 
     <div id="science" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
         <h5 class="text-h5">SCIENCE : </h5>
           <dl class="row">
@@ -90,7 +90,7 @@
     </div>
 
     <div id="computer" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
           <h5 class="text-h5">COMPUTER : </h5>
           <dl class="row">
@@ -125,7 +125,7 @@
     </div>
 
     <div id="statsData" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
           <h5 class="text-h5"> STATS&DATA : </h5>
           <dl class="row">
@@ -159,14 +159,14 @@
         <table class="ruled-book">
             <tbody>
               <tr>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9+\-*/]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9+\-*/]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
               </tr>
               <tr>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>

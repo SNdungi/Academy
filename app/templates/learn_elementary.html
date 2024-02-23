@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}TransX| HARAMBEE COOP{% endblock %}
+{% block title %}Academy | Fluid Core{% endblock %}
 {% block content%}
     <!--order detail form-->
     <div class="col-md-9" style="height: auto; min-height: 100px; display: flex; flex-direction: column; align-items: baseline; margin:auto ;">
@@ -9,16 +9,16 @@
       <h4 class="display-4 fw-bold headers-h4 mt-4" style="margin-top: auto;">ELEMENTARY</h4>
       <p class="euro" style="align-self:baseline;" >Content suitable for students in Primary School (Grade 1-6)</p>
     </div>
-    <div class="container">
-      <div class="container-fluid col-md-11">
+
+      <div class="container-fluid col-md-9 m-md-auto">
         <button class="tablink" onclick="openPage('math', this, 'rgb(236, 245, 236)')"id="defaultOpen">MATH</button>
         <button class="tablink" onclick="openPage('science', this, 'rgb(236, 245, 236)')"id="defaultOpen">SCIENCE</button>
         <button class="tablink" onclick="openPage('computer', this, 'rgb(236, 245, 236)')"id="defaultOpen">COMPUTER</button>
         <button class="tablink" onclick="openPage('statsData', this, 'rgb(236, 245, 236)')"id="defaultOpen">STAT&DATA</button>
       </div>
-    </div>
+
     <div id="math" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
         <h5 class="text-h5">MATH : </h5>
         <dl class="row">
@@ -53,7 +53,7 @@
     </div>
 
     <div id="science" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
         <h5 class="text-h5">SCIENCE : </h5>
           <dl class="row">
@@ -88,7 +88,7 @@
     </div>
 
     <div id="computer" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
           <h5 class="text-h5">COMPUTER : </h5>
           <dl class="row">
@@ -123,7 +123,7 @@
     </div>
 
     <div id="statsData" class="tabcontent col-md-9 m-md-auto">
-      <div class="container" style="padding: 0%; margin-top: 10px;" >
+      <div style="padding: 0%; margin-top: 10px;" >
         <section class="section2">
           <h5 class="text-h5"> STATS&DATA : </h5>
           <dl class="row">
@@ -165,6 +165,82 @@
                   <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                   <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                   <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                  <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+              </tr>
+              <tr>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" value="2" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" value="5" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" value="6" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+
+              </tr>
+              <tr>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" value="+" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" value="6" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);" value="8" ></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input style="font-size: 18px; color: indigo; font-weight: bold;" value="THO"></td>
+                <td><input style="font-size: 18px; color: indigo; font-weight: bold;" value="HUN"></td>
+                <td><input style="font-size: 18px; color: indigo; font-weight: bold;" value="TEN"></td>
+                <td><input style="font-size: 18px; color: indigo; font-weight: bold;" value="ONE"></td>
+
+              </tr>
+              <tr>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1"  value="2"></td>
+                <td><input maxlength="1"  value="+"></td>
+                <td><input maxlength="1"  value="0"></td>
+                <td><input maxlength="1" value="="></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" value="2"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+              </tr>
+              <tr>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1"  value="5"></td>
+                <td><input maxlength="1"  value="+"></td>
+                <td><input maxlength="1"  value="6"></td>
+                <td><input maxlength="1" value="="></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" value="1"></td>
+                <td><input maxlength="1" value="1"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+              </tr>
+              <tr>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1"  value="6"></td>
+                <td><input maxlength="1"  value="+"></td>
+                <td><input maxlength="1"  value="8"></td>
+                <td><input maxlength="1" value="="></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" value="1"></td>
+                <td><input maxlength="1" value="4"></td>
               </tr>
               <tr>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
@@ -175,68 +251,16 @@
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-              </tr>
-              <tr>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-              </tr>
-              <tr>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-              </tr>
-              <tr>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-              </tr>
-              <tr>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-              </tr>
-              <tr>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-              </tr>
-              <tr>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
-                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1"></td>
+                <td><input style="font-size: 24px; color: indigo; font-weight: bold; background-color: ivory; border-top: 1px solid black;" value="3"></td>
+                <td><input style="font-size: 24px; color: indigo; font-weight: bold; background-color: ivory;border-top: 1px solid black;" value="2"></td>
+                <td><input style="font-size: 24px; color: indigo; font-weight: bold; background-color: ivory;border-top: 1px solid black;" value="4"></td>
               </tr>
               <tr class="ruled-book-ans">
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
+                <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>
                 <td><input maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 1);"></td>

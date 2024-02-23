@@ -403,3 +403,11 @@ function validateInputs(input) {
   let newValue = value.replace(validChars, ''); // Remove any invalid characters
   input.value = newValue; // Update the input value
 }
+
+function scrollToPreviewInner() {
+  var previewInnerDiv = document.getElementById("preview-inner-show");
+  if (previewInnerDiv) {
+      // Scroll the page to the top of the preview-inner-show div
+      previewInnerDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}

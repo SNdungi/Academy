@@ -10,8 +10,25 @@ body, html {
 }
 
 .navbar{
-  background-color: black;
+  background-color: #180b55;
+  color: white;
 }
+
+.elem:hover{
+  margin-bottom:5px solid rgb(152, 253, 0);
+
+}
+
+.int:hover{
+  margin-bottom:5px solid rgb(245, 0, 253);
+  
+  
+}
+.adv:hover{
+  margin-bottom:5px solid gold;
+
+}
+
 
 
 .container-fluid,
@@ -242,7 +259,7 @@ select option {
 
   .section1{
     background-color: rgb(20, 0, 29);
-    background-image: url("/static/section1_bgd.jpg");
+    background-image: url("/static/section1_bgd1.jpg");
     background-size: cover;
 
   }
@@ -269,24 +286,32 @@ dl {
     margin: 1px !important;
 }
 .preview{
-  background-color: #0d023d;
+  background-color: #180b55;
   width: 100%;
-  height: 100%;
+  min-height: 500px;
   padding: 1px;
   justify-content: center;
   margin: 0%;
-  white-space: nowrap;
-  border: 1px solid gold;
-  border-radius: 1.5rem;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
 
 }
 
 .preview-inner{
-  background-color: #d9d3e4;
-  height: 500px;
-  border-bottom-left-radius:1.5rem ;
-  border-bottom-right-radius:1.5rem ;
+  background-color: #ffffff;
+  min-height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-image: url('/static/silver2.jpg') 30 repeat;
+
+
+
 }
 .input-demo {
   height: 100px;
@@ -372,37 +397,9 @@ dl {
   position: relative;
 }
 
-.operators-top,
-.operators-right,
-.operators-left,
-.operators-bottom {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 45%; /* Position relative to the middle of the rotated square */
-  left: 45%; /* Position relative to the middle of the rotated square */
-  transform: translate(-50%, -50%); /* Center the objects */
-}
-
-.operators-top {
-  top: 25%; /* Adjust top position to move closer to the top edge */
-
-}
-
-.operators-right {
-  left: 65%; /* Adjust left position to move closer to the right edge */
-}
-
-.operators-left {
-  left: 25%; /* Adjust left position to move closer to the left edge */
-}
-
-.operators-bottom {
-  top: 65%; /* Adjust top position to move closer to the bottom edge */
-}
-
 .hr-line{
-  color: aqua;
+
+  border-top: 2px solid gold;
 }
 .tiny-label{
   display: block;
@@ -422,14 +419,78 @@ dl {
   width: 4rem;
   height: 0.75rem;
 }
+.tiny-label-header{
+  display: flex;
+  max-width: 100px;
+  height:100%;
+  justify-content: space-between;
+  justify-self: center;
+}
+.speech-bubble {
+  position: relative;
+}
+.tiny-labelx {
+  display: flex;
+  background-color: rgb(252, 252, 252);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 3px;
+  justify-content: center;
+  align-items: center; /* Center the text vertically */
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.tiny-labelx:hover {
+  background-color: #ddd; 
+  cursor: pointer;/* Grey hover background color */
+}
+
+.tiny-labelx::after {
+  content: attr(data-label);  /* Text content of the tooltip */
+  position: absolute; /* Position the tooltip absolutely */
+  top: 150%; /* Position the tooltip above the element */
+  left: 50%; /* Align the tooltip horizontally */
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  background-color: #333; /* Tooltip background color */
+  color: #fff; /* Tooltip text color */
+  padding: 4px 8px; /* Padding for the tooltip */
+  border-radius: 4px; /* Border radius for the tooltip */
+  font-size: 10px; /* Font size for the tooltip */
+  opacity: 0; /* Initially hide the tooltip */
+  transition: opacity 0.3s ease; /* Add a transition effect */
+}
+
+.tiny-labelx:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+}
+
+.tiny-labelx:nth-child(1)::after {
+  content: "Elementary";
+}
+
+.tiny-labelx:nth-child(2)::after {
+  content: "Intermediate";
+}
+
+.tiny-labelx:nth-child(3)::after {
+  content: "Advanced";
+}
+
 .simulation {
-  
   padding: 5px; 
   margin-top: 20px;
   margin-top: 10px;
   color: rgb(255, 255, 255);
   font-size: 30px;
   font-stretch: ultra-expanded;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .math-page{
@@ -462,6 +523,15 @@ dl {
   text-align: center;
   vertical-align: middle;
 }
+.ruled-book-subs{
+  font-size: 18px;
+  color: blue;
+  width: 100%;
+  height:100%;
+  border:none;
+  text-align: center;
+  vertical-align: middle;
+}
 .ruled-book-ans input{
   font-size: 24px;
   font-weight: bold;
@@ -478,4 +548,34 @@ dl {
   border-image: url('/static/pencil-scribble-texture-3.jpg') 30 repeat;
   margin: none;
 }
-
+.silver{
+  border-image: url('/app/static/silver.jpg') 30 repeat;
+}
+.display{
+  flex-direction:row; 
+  align-items: flex-start;
+  justify-content: space-between; 
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.display input{
+  min-height: 50px;
+  max-width: 90%;
+  background-color: rgb(255, 255, 255);
+  color: chocolate;
+  font-size: 25px;
+  font-weight: bold;
+}
+.display-note{
+  display: block;
+  background-color: #f5f4f8;
+  color: rgb(22, 13, 1);
+  justify-content: left;
+  border: solid 1px rgb(110, 110, 110);
+  margin-top: 20px;
+  padding: 10px;
+  max-width: 90%;
+  min-height: 150px;
+  font-size: 12px;
+}
